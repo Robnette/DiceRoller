@@ -1,0 +1,459 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/generalBackground" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dice_fragment_sentence"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/background_light" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/dice_padding">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dice_4"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/background_light" />
+
+                    <ImageView
+                        android:id="@+id/imageD4"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/d4" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/dice_padding">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dice_6"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/background_light" />
+
+                    <ImageView
+                        android:id="@+id/imageD6"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/d6" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/dice_padding">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dice_8"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/background_light" />
+
+                    <ImageView
+                        android:id="@+id/imageD8"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/d8" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/dice_padding">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dice_10"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/background_light" />
+
+                    <ImageView
+                        android:id="@+id/imageD10"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/d10" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/dice_padding">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dice_12"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/background_light" />
+
+                    <ImageView
+                        android:id="@+id/imageD12"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/d12" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/dice_padding">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dice_20"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/background_light" />
+
+                    <ImageView
+                        android:id="@+id/imageD20"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/d20" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/dice_padding">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dice_100"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/background_light" />
+
+                    <ImageView
+                        android:id="@+id/imageD100"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/d100" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/dice_padding">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dice_custom"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/background_light" />
+
+                    <ImageView
+                        android:id="@+id/imageCustom"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/custom" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="30dip"
+                        android:layout_marginTop="30dip"
+                        android:background="@drawable/window">
+
+                        <Button
+                            android:id="@+id/btnCustomLess"
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/textCustom"
+                            android:layout_alignBottom="@+id/textCustom"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:text="-" />
+
+                        <TextView
+                            android:id="@+id/textCustom"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="d50"
+                            android:textAlignment="center"
+                            android:layout_centerVertical="true"
+                            android:textColor="@android:color/background_light" />
+
+
+                        <Button
+                            android:id="@+id/btnCustomMore"
+                            android:layout_width="40dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/textCustom"
+                            android:layout_alignBottom="@+id/textCustom"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:text="+" />
+
+                    </RelativeLayout>
+
+                    <!--<ImageView-->
+                    <!--android:id="@+id/imageRandom"-->
+                    <!--android:layout_height="fill_parent"-->
+                    <!--android:adjustViewBounds="true"-->
+                    <!--android:scaleType="fitCenter"-->
+                    <!--android:src="@drawacustomndom"-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_gravity="center" />-->
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="10dip"
+                    android:background="@drawable/window">
+
+                    <Button
+                        android:id="@+id/btnDiceLess"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="-" />
+
+                    <TextView
+                        android:id="@+id/textDice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="1d"
+                        android:textAlignment="center"
+                        android:layout_centerVertical="true"
+                        android:textColor="@android:color/background_light" />
+
+
+                    <Button
+                        android:id="@+id/btnDiceMore"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="+" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="10dip"
+                    android:background="@drawable/window">
+
+                    <Button
+                        android:id="@+id/btnAddLess"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="-" />
+
+                    <TextView
+                        android:id="@+id/textAdd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="+0"
+                        android:textAlignment="center"
+                        android:layout_centerVertical="true"
+                        android:textColor="@android:color/background_light" />
+
+                    <Button
+                        android:id="@+id/btnAddMore"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="+" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <fragment
+                    android:id="@+id/fragment_result"
+                    android:name="me.robnette.diceroller.activity.fragment.ResultFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <!--<RelativeLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="80dip"-->
+                    <!--android:layout_margin="10dip"-->
+                    <!--android:background="@drawable/window">-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/rollResultType"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_alignParentLeft="true"-->
+                        <!--android:layout_alignParentStart="true"-->
+                        <!--android:layout_alignParentTop="true"-->
+                        <!--android:text="..."-->
+                        <!--android:textAlignment="center"-->
+                        <!--android:textColor="@android:color/background_light"-->
+                        <!--android:paddingTop="3dp"-->
+                        <!--android:paddingLeft="10dp"/>-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/rollResultTime"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_alignParentRight="true"-->
+                        <!--android:layout_alignParentEnd="true"-->
+                        <!--android:layout_alignParentTop="true"-->
+                        <!--android:text="..."-->
+                        <!--android:textAlignment="center"-->
+                        <!--android:textColor="@android:color/background_light"-->
+                        <!--android:paddingTop="3dp"-->
+                        <!--android:paddingRight="10dp"/>-->
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_alignParentBottom="true"-->
+                        <!--android:layout_alignParentEnd="true"-->
+                        <!--android:layout_alignParentRight="true"-->
+                        <!--android:text="@string/dice_last_roll"-->
+                        <!--android:textAlignment="center"-->
+                        <!--android:textColor="@android:color/background_light"-->
+                        <!--android:paddingBottom="3dp"-->
+                        <!--android:paddingRight="10dp"-->
+                        <!--android:id="@+id/textLastRoll" />-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/rollResult"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:text="@string/dice_result_default"-->
+                        <!--android:textColor="@android:color/background_light"-->
+                        <!--android:paddingLeft="10dp"-->
+                        <!--android:textSize="24sp" />-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/resultDetail"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_alignEnd="@+id/rollResultTime"-->
+                        <!--android:layout_alignRight="@+id/rollResultTime"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:text=""-->
+                        <!--android:paddingRight="10dp"-->
+                        <!--android:textColor="@android:color/background_light"-->
+                        <!--android:textSize="14sp" />-->
+
+                <!--</RelativeLayout>-->
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

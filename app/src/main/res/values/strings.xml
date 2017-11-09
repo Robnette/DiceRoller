@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Dice Roller</string>
+    <string name="title_activity_main2">Main2Activity</string>
+
+    <string name="dice_fragment_sentence">Tap to roll and good luck!</string>
+    <string name="dice_result_default">No roll yet...</string>
+    <string name="dice_last_roll">*Last roll</string>
+    <string name="dice_4">d4</string>
+    <string name="dice_6">d6</string>
+    <string name="dice_8">d8</string>
+    <string name="dice_10">d10</string>
+    <string name="dice_12">d12</string>
+    <string name="dice_20">d20</string>
+    <string name="dice_100">d100</string>
+    <string name="dice_custom">Custom</string>
+    <string name="history_empty">(empty)</string>
+
+</resources>
