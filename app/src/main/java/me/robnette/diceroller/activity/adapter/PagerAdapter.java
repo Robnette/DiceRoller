@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import me.robnette.diceroller.R;
 import me.robnette.diceroller.activity.fragment.DiceFragment;
 import me.robnette.diceroller.activity.fragment.HistoryFragment;
 
@@ -16,7 +17,7 @@ import me.robnette.diceroller.activity.fragment.HistoryFragment;
 
 public class PagerAdapter extends FragmentPagerAdapter {
 
-    private String tabTitles[] = new String[] { "Rob's Dice", "Historique Tab" };
+    private int tabTitles[] = new int[] {R.string.tab_dice , R.string.tab_history};
     private Context context;
 
     public PagerAdapter(FragmentManager fm, Context context) {
@@ -42,7 +43,6 @@ public class PagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public CharSequence getPageTitle(int position) {
-        // Generate title based on item position
-        return tabTitles[position];
+        return context.getResources().getString(tabTitles[position]);
     }
 }

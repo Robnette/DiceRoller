@@ -1,7 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Dice Roller</string>
-    <string name="title_activity_main2">Main2Activity</string>
-
     <string name="dice_fragment_sentence">Tap to roll and good luck!</string>
     <string name="dice_result_default">No roll yet...</string>
     <string name="dice_last_roll">*Last roll</string>
@@ -12,7 +11,8 @@
     <string name="dice_12">d12</string>
     <string name="dice_20">d20</string>
     <string name="dice_100">d100</string>
-    <string name="dice_custom">Custom</string>
+    <string name="dice_custom">Dice custom</string>
     <string name="history_empty">(empty)</string>
-
+    <string name="tab_dice">Rob\'s Dice</string>
+    <string name="tab_history">History</string>
 </resources>

@@ -10,25 +10,24 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.nio.Buffer;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import me.robnette.diceroller.R;
+import me.robnette.diceroller.model.BtnAdd;
+import me.robnette.diceroller.model.BtnCustom;
+import me.robnette.diceroller.model.BtnDice;
+import me.robnette.diceroller.model.ButtonAbstract;
 import me.robnette.diceroller.model.DiceEnum;
 import me.robnette.diceroller.model.DiceModel;
 import me.robnette.diceroller.service.RandomService;
 import me.robnette.diceroller.util.Constant;
-import me.robnette.diceroller.util.Time;
 
-
-/**
- * A simple {@link Fragment} subclass.
- */
 public class DiceFragment extends Fragment {
 
     private static DiceFragment instance;
-//    private int mPage;
     private Button btnDiceLess, btnDiceMore;
     private TextView textDice;
     private int nbDice = 1;
@@ -41,9 +40,7 @@ public class DiceFragment extends Fragment {
 
     private Map<Integer, DiceEnum> diceMap;
 
-    public DiceFragment() {
-        // Required empty public constructor
-    }
+    public DiceFragment() {}
 
     public static DiceFragment newInstance(int page) {
         if(instance == null){
@@ -58,7 +55,6 @@ public class DiceFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        mPage = getArguments().getInt(Constant.ARG_TAB_PAGE);
 
         diceMap = new HashMap<>();
         diceMap.put(R.id.imageD4, DiceEnum.D4);
@@ -75,8 +71,6 @@ public class DiceFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.fragment_dice, container, false);
 
-        final ResultFragment resultFragment = (ResultFragment)getChildFragmentManager().findFragmentById(R.id.fragment_result);
-
         btnDiceLess = view.findViewById(R.id.btnDiceLess);
         btnDiceMore = view.findViewById(R.id.btnDiceMore);
         textDice = view.findViewById(R.id.textDice);
@@ -87,62 +81,9 @@ public class DiceFragment extends Fragment {
         btnCustomMore = view.findViewById(R.id.btnCustomMore);
         textCustom = view.findViewById(R.id.textCustom);
 
-        btnDiceLess.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(nbDice > 1){
-                    nbDice--;
-                    textDice.setText(nbDice + "d");
-                }
-            }
-        });
-        btnDiceMore.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(nbDice < 10){
-                    nbDice++;
-                    textDice.setText(nbDice + "d");
-                }
-            }
-        });
-
-        btnAddLess.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(addNum > -50){
-                    addNum--;
-                    textAdd.setText((addNum >= 0 ? "+" : "-") + addNum);
-                }
-            }
-        });
-        btnAddMore.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(addNum < 50){
-                    addNum++;
-                    textAdd.setText((addNum >= 0 ? "+" : "-") + addNum);
-                }
-            }
-        });
-
-        btnCustomLess.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(customNum > 1){
-                    addNum--;
-                    textCustom.setText("d" + customNum);
-                }
-            }
-        });
-        btnCustomMore.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(customNum < 500){
-                    customNum++;
-                    textCustom.setText("d" + customNum);
-                }
-            }
-        });
+        final BtnDice btnDice = new BtnDice(1,  10, 1, btnDiceLess, btnDiceMore, textDice);
+        final BtnAdd btnAdd = new BtnAdd(-50,  50, 0, btnAddLess, btnAddMore, textAdd);
+        final BtnCustom btnCustom = new BtnCustom(2,  200, 50, btnCustomLess, btnCustomMore, textCustom);
 
         for(Map.Entry<Integer, DiceEnum> entry : diceMap.entrySet()) {
             int id = entry.getKey();
@@ -152,11 +93,11 @@ public class DiceFragment extends Fragment {
             imageView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    DiceModel diceModel = new DiceModel(diceEnum, customNum);
+                    DiceModel diceModel = new DiceModel(diceEnum, btnCustom.getValue());
                     int total = 0;
                     int tmp;
                     StringBuffer totalString = null;
-                    for(int i = 0; i < nbDice; i++){
+                    for(int i = 0; i < btnDice.getValue(); i++){
                         tmp = RandomService.getRandom(diceModel);
                         total += tmp;
                         if(totalString == null){
@@ -168,8 +109,8 @@ public class DiceFragment extends Fragment {
                     }
                     diceModel.setView(view);
                     diceModel.setResult(total);
-                    diceModel.setAddNum(addNum);
-                    diceModel.setNbDice(nbDice);
+                    diceModel.setAddNum(btnAdd.getValue());
+                    diceModel.setNbDice(btnDice.getValue());
                     diceModel.setTotalDetail(totalString.toString());
 
                     DiceModel diceModelHisto = (DiceModel)diceModel.clone();

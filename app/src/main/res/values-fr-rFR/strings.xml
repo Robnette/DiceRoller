@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Dice Roller</string>
+    <string name="dice_fragment_sentence">Appuyez pour lancer les dés et bonne chance !</string>
+    <string name="dice_result_default">Aucun lancé pour le moment...</string>
+    <string name="dice_last_roll">*Dernier lancé</string>
+    <string name="dice_4">d4</string>
+    <string name="dice_6">d6</string>
+    <string name="dice_8">d8</string>
+    <string name="dice_10">d10</string>
+    <string name="dice_12">d12</string>
+    <string name="dice_20">d20</string>
+    <string name="dice_100">d100</string>
+    <string name="dice_custom">Personnalisé</string>
+    <string name="history_empty">(vide)</string>
+    <string name="tab_dice">Les dés de Rob</string>
+    <string name="tab_history">Historique</string>
+</resources>
