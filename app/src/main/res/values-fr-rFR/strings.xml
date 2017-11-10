@@ -11,7 +11,7 @@
     <string name="dice_12">d12</string>
     <string name="dice_20">d20</string>
     <string name="dice_100">d100</string>
-    <string name="dice_custom">Personnalisé</string>
+    <string name="dice_custom">Perso.</string>
     <string name="history_empty">(vide)</string>
     <string name="tab_dice">Les dés de Rob</string>
     <string name="tab_history">Historique</string>
